@@ -148,6 +148,8 @@ button.addEventListener("click", () => {
 
 then tsc using-ts.ts, then switch the js-only to using-ts.js at index.html. then ull see it works properly
 
+---
+
 ## 1953 - The Advantages of TypeScript
 
 - Types
@@ -157,10 +159,13 @@ then tsc using-ts.ts, then switch the js-only to using-ts.js at index.html. then
 - rich configuration options
 - modern tooling that helps even in non-typescript projects
 
+---
+
 ## 2259 - Course Outline
 
 <details>
 <summary>Course Outline</summary>
+
 - TypeScript Basics
 - Compiler & Configuration Deep Dive
 - Working with next-gen js code
@@ -175,6 +180,20 @@ then tsc using-ts.ts, then switch the js-only to using-ts.js at index.html. then
 - react+ts & nodejs+ts
 </details>
 
+---
+
 ## 3336 - The Course Project Setup
+
+create index.html with app.js
+then touch app.ts
+
+tsc app.ts to create app.js
+
+then npm init -y
+then npm i --save-dev lite-server
+
+add to package.json the script:
+"start":"lite-server",
+then npm run serve.
 
 ## 4056 - Module Introduction
