@@ -1,3 +1,4 @@
+//Declaring Objects
 const person:{
   name:string,
   age:number,
@@ -8,12 +9,14 @@ const person:{
   hobbies: ['hobby1','hobby2']
 
 }
+//Accessing attribute from object
+console.log(person.name);
 
+// Declaring Arrays with Mixed Types
 let favoriteActivities:any[];
 favoriteActivities = ['activity1',1]
 
-console.log(person.name);
-
+//for loop on each hobby name
 for(const hobby of person.hobbies){
   console.log(hobby);
 }
