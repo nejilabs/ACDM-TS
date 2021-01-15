@@ -197,3 +197,87 @@ add to package.json the script:
 then npm run serve.
 
 ## 4056 - Module Introduction
+
+### Core Syntax & Features: Working with Types
+
+- CoreTypes
+  - number
+  - string
+  - boolean
+  - object
+    TypeScript's type system only helps you during development (ex: before compiling your code).
+
+```typescript
+function add(n1: number, n2: number) {
+  return n1 + n2;
+}
+
+const number1 = 5;
+const number2 = 2.8;
+
+const result = add(number1, number2);
+console.log(result);
+```
+
+if u see typeof n1, it prints number.
+
+The key difference is js uses dynamic types resolved at runtime, while typescript uses static types set during development.
+
+```typescript
+function add(n1: number, n2: number, showResult: boolean, phrase: string) {
+  let result = n1 + n2;
+  if (showResult) {
+    console.log(phrase + result);
+  } else {
+    return phrase + result;
+  }
+}
+
+const number1 = 5;
+const number2 = 2.8;
+const printResult = false;
+const resultPhrase = "Result is: ";
+
+const result = add(number1, number2, printResult, resultPhrase);
+console.log(result);
+```
+
+output: Result is: 7.8 - which is correct
+
+### 1:07:59 - Object Types
+```typescript
+const person={
+  name: 'Name',
+  age: 10
+
+}
+
+console.log(person.name);
+```
+produces error when logging name from the person object.
+
+```typescript
+const person:  object ={
+  name: 'Name',
+  age: 10
+
+}
+
+console.log(person.name);
+```
+
+however still produces error when logging name
+
+```typescript
+const person:  {
+  name:string;
+  age:number; 
+}={
+  name: 'Name',
+  age: 10
+
+}
+
+console.log(person.name);
+```
+now it doesnt produce error.
