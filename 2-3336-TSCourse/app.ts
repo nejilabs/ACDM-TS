@@ -7,8 +7,8 @@ const person:{
   name: 'Name',
   age: 10,
   hobbies: ['hobby1','hobby2']
-
 }
+
 //Accessing attribute from object
 console.log(person.name);
 
@@ -18,5 +18,5 @@ favoriteActivities = ['activity1',1]
 
 //for loop on each hobby name
 for(const hobby of person.hobbies){
-  console.log(hobby);
+  console.log(hobby.toUpperCase());
 }
