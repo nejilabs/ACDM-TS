@@ -370,7 +370,6 @@ hobby2
 String
 AnotherString
 ```
-```
 
 ### Enums 01:27:21
 ### The Any Type 01:34:26
