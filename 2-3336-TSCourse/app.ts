@@ -1,22 +1,24 @@
 //Declaring Objects
-const person:{
+const person:{ 
   name:string,
   age:number,
-  hobbies:string[]
+  thisArray:string[],
+  thisTuple:[number,string]
 }={
-  name: 'Name',
-  age: 10,
-  hobbies: ['hobby1','hobby2']
+  name: 'Name', //string
+  age: 10, //number
+  thisArray: ['hobby1','hobby2'], //array
+  thisTuple: [1,'String'] //tuple
+} //object
+
+
+// person.tuple[1] = 2; //will produce error
+person.thisTuple.push('AnotherString'); //this one will work as long as it matches any type contained in the tuple.
+
+for(const eachElement of person.thisArray){
+  console.log(eachElement);
 }
 
-//Accessing attribute from object
-console.log(person.name);
-
-// Declaring Arrays with Mixed Types
-let favoriteActivities:any[];
-favoriteActivities = ['activity1',1]
-
-//for loop on each hobby name
-for(const hobby of person.hobbies){
-  console.log(hobby.toUpperCase());
+for(const eachElement of person.thisTuple){
+  console.log(eachElement);
 }
